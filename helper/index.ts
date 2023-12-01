@@ -62,7 +62,7 @@ export const getScooterRes = async (entryUrl: string): Promise<Scooter> => {
   const response = (await getEntryByUrl({
     contentTypeUid: "final_assignment_landing_page",
     entryUrl,
-    referenceFieldPath: ["page_components.from_blog.featured_blogs"],
+    referenceFieldPath: ["page_sections.feature_highlights.feature_highlight"],
     jsonRtePath: [
       "page_components.from_blog.featured_blogs.body",
       "page_components.section_with_buckets.buckets.description",

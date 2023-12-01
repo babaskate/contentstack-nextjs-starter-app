@@ -23,7 +23,7 @@ export default function Scooter(props: ScooterProps) {
 
   useEffect(() => {
     onEntryChange(() => fetchData());
-  }, []);
+  }, [page]);
 
   return getEntry ? (
     <RenderScooterComponents

@@ -146,3 +146,20 @@ export type RenderScooterProps = {
   locale: string;
   scooterComponent: Scooter;
 }
+
+export type FeatureHighlight = {
+  title: string;
+}
+
+export type FeatureHighlights = {
+  feature_highlight: FeatureHighlight[];
+}
+
+export type Testimonials = {
+  title: string;
+}
+
+export type PageSections = {
+  feature_highlights: FeatureHighlights;
+  testimonials: Testimonials;
+}
