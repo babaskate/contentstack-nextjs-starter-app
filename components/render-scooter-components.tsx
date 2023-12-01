@@ -31,9 +31,6 @@ export default function RenderScooterComponents(props: RenderScooterProps) {
 
               if (section.testimonials) {
                 return <p key={`testimonials-${key}`}>{section.testimonials.title}</p>
-                  // return section.feature_highlights.feature_highlight.map((item: object, key: number) => {
-                  //   return <p key={`feature-highligh-${key}`}>{item.title}</p>
-                  // })
               }
             })}
         </div> 
