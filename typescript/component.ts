@@ -1,4 +1,5 @@
 import { Action, Image } from "./action";
+import { Scooter } from "./pages";
 
 type AdditionalParam = {
   title: string;
@@ -64,7 +65,7 @@ type Widget = {
 }
 
 export type Component = {
-  hero_banner: Banner;
+  hero_banner?: Banner;
   section?: SectionProps;
   section_with_buckets?: SectionWithBucket;
   from_blog?: FeaturedBlogData;
@@ -72,6 +73,10 @@ export type Component = {
   section_with_html_code?: AdditionalParamProps;
   our_team?: TeamProps;
   widget?: Widget;
+}
+
+export type ScooterComponent = {
+  scooterComponent: Scooter
 }
 
 export type SectionWithBucket = {
@@ -133,4 +138,11 @@ export type RenderProps = {
   entryUid: string;
   locale: string;
   pageComponents:Component[];
+}
+
+export type RenderScooterProps = {
+  contentTypeUid: string;
+  entryUid: string;
+  locale: string;
+  scooterComponent: Scooter;
 }

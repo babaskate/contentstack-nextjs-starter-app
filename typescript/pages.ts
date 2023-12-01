@@ -1,4 +1,4 @@
-import { Component } from "../typescript/component";
+import { Component, ScooterComponent } from "../typescript/component";
 import { Image } from "../typescript/action";
 import { Entry, HeaderProps ,FooterProps } from "./layout";
 
@@ -45,6 +45,10 @@ type PageProps = {
   blogPost: BlogPosts;
 }
 
+type ScooterPageProps = {
+  page: Scooter;
+}
+
 type Seo = {
   enable_search_indexing: boolean
 }
@@ -66,8 +70,29 @@ export type Props = {
   footer: FooterProps;
 }
 
+export type ScooterProps = {
+  page: Scooter;
+  entryUrl: string;
+  Component: any;
+  entries: Entry;
+  pageProps: ScooterPageProps;
+  header: HeaderProps;
+  footer: FooterProps;
+}
+
 export type Page ={
   page_components: Component[];
+  uid: string;
+  locale: string;
+  url: string;
+  seo: Seo;
+  title: string;
+}
+
+export type Scooter ={
+  hero_banner: any;
+  page_sections: any;
+  scooter_specs: any;
   uid: string;
   locale: string;
   url: string;

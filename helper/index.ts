@@ -1,5 +1,5 @@
 import { addEditableTags } from "@contentstack/utils";
-import { Page, BlogPosts } from "../typescript/pages";
+import { Page, BlogPosts, Scooter } from "../typescript/pages";
 import getConfig from "next/config";
 import { FooterProps, HeaderProps } from "../typescript/layout";
 import { getEntry, getEntryByUrl } from "../contentstack-sdk";
@@ -55,6 +55,21 @@ export const getPageRes = async (entryUrl: string): Promise<Page> => {
     ],
   })) as Page[];
   liveEdit && addEditableTags(response[0], "page", true);
+  return response[0];
+};
+
+export const getScooterRes = async (entryUrl: string): Promise<Scooter> => {
+  const response = (await getEntryByUrl({
+    contentTypeUid: "final_assignment_landing_page",
+    entryUrl,
+    referenceFieldPath: ["page_components.from_blog.featured_blogs"],
+    jsonRtePath: [
+      "page_components.from_blog.featured_blogs.body",
+      "page_components.section_with_buckets.buckets.description",
+      "page_components.section_with_html_code.description",
+    ],
+  })) as Scooter[];
+  liveEdit && addEditableTags(response[0], "final_assignment_landing_page", true);
   return response[0];
 };
 
