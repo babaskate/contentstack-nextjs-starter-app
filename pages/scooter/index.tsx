@@ -33,7 +33,7 @@ export default function Scooter(props: ScooterProps) {
       locale={getEntry.locale}
       />
   ) : (
-    <Skeleton count={3} height={300} />
+    <Skeleton count={3} height={400} />
   );
 }
 
