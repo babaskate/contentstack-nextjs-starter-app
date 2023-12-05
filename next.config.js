@@ -2,8 +2,6 @@ const withPWA = require('next-pwa')({
   dest: 'public'
 });
 
-console.log("CONTENTSTACK_API_KEY", process.env);
-
 const config = {
   publicRuntimeConfig: {
     // Will be available on both server and client
