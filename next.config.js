@@ -2,7 +2,6 @@ const withPWA = require('next-pwa')({
   dest: 'public'
 });
 
-console.log("env: ", process.env);
 const config = {
   publicRuntimeConfig: {
     // Will be available on both server and client
